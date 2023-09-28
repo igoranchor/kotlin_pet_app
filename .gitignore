@@ -1,0 +1,51 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+logs/
+*.retry
+.attach_pid*
+*.log
+*.tgz
+*.lock
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+###molecule###
+molecule
+.yamllint
+
+###ansible###
+.vault
+*.vault
+ansible/roles
+
+### Emacs ###
+.dir-locals.el
+
+### igonre dev config ###
+/config/application.properties
+/config/application.yaml
+my.local.env
+
+### ignore jpa buddy ###
+/.jpb/jpb-settings.xml
+/.jpb/persistence-units.xml
