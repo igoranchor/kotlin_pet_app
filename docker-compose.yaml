@@ -1,0 +1,31 @@
+version: '3.3'
+
+services:
+
+  postgres:
+    container_name: pet-postgres
+    image: postgres:16
+    environment:
+      POSTGRES_USER: pet      # postgres user
+      POSTGRES_PASSWORD: pet  # postgres password
+    ports:
+      - "5432:5432"           # postgres port
+
+  app:
+    container_name: pet-app
+    build:
+      dockerfile: Dockerfile
+    profiles: [ 'local' ]
+    ports:
+      - "9000:8080"
+    depends_on:
+      - postgres
+    env_file:
+      - local.env
+    command: java -jar app.jar
+    deploy:
+      resources:
+        limits:
+          memory: 1000M
+        reservations:
+          memory: 1000M

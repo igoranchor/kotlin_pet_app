@@ -49,3 +49,6 @@ my.local.env
 ### ignore jpa buddy ###
 /.jpb/jpb-settings.xml
 /.jpb/persistence-units.xml
+
+### Gradle ###
+.gradle/

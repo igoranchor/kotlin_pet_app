@@ -5,12 +5,13 @@ import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 import ru.yatskevich.pet.service.PetService
+import java.util.UUID
 
 @RestController
-@RequestMapping("/products")
+@RequestMapping("/pets")
 class PetController(private val petService: PetService) {
 
     @GetMapping("/{id}")
-    fun getPet(@PathVariable id: Long) = petService.getPet(id)
+    fun getPet(@PathVariable id: UUID) = petService.getPet(id)
 
 }

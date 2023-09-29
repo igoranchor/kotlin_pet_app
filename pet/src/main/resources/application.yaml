@@ -1,2 +1,20 @@
+spring:
+  application:
+    name: pet
+  datasource:
+    url: ${PET_DATABASE_URL}
+    username: ${PET_DATABASE_USER}
+    password: ${PET_DATABASE_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 4
+      connection-timeout: 5000
+      validation-timeout: 2000
+      leak-detection-threshold: 300000
+      pool-name: hikari-${spring.application.name}
+  liquibase:
+    changeLog: "classpath:/db/changelog-master.yaml"
+    driver-class-name: org.postgresql.Driver
+
 server:
   port: 8080

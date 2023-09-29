@@ -3,7 +3,7 @@ package ru.yatskevich.pet.entity
 import jakarta.persistence.*
 import java.util.*
 
-@Table
+@Table(name = "pets")
 @Entity
 data class Pet(
 
