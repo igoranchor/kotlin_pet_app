@@ -51,4 +51,7 @@ my.local.env
 /.jpb/persistence-units.xml
 
 ### Gradle ###
-.gradle/
+*/.gradle/
+*/gradle/
+*/gradlew
+*/gradlew.bat
